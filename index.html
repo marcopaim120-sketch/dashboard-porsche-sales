@@ -172,7 +172,7 @@ function render(){
   const top = Object.entries(byModel).sort((a,b)=>b[1]-a[1]).slice(0,10);
   const max1 = top[0][1];
   $("c1").innerHTML = top.map(([m,v])=>'<div class="row"><div class="n" title="'+esc(m)+'">'+esc(m)+'</div><div class="track"><div class="fill" style="width:'+(100*v/max1)+'%"></div></div><div class="val">'+money(v)+'</div></div>').join("");
-  $("r1").innerHTML = "Em destaque: <b>"+esc(top[0][0])+"</b>, com "+money(top[0][1])+" ("+pct(top[0][1],rev)+" da receita do filtro). O top "+top.length+" soma "+pct(top.reduce((s,x)=>s+x[1],0),rev)+" da receita.";
+  $("r1").innerHTML = "Em destaque: <b>"+esc(top[0][0])+"</b>, com "+money(top[0][1])+" ("+pct(top[0][1],rev)+" da receita do filtro)."+(top.length>1 ? " O top "+top.length+" soma "+pct(top.reduce((s,x)=>s+x[1],0),rev)+" da receita." : "");
 
   // 2) estados x pagamento
   const cnt = p => DATA.filter(r=>r.payment_method===p).length;
@@ -188,7 +188,7 @@ function render(){
     return '<div class="row"><div class="n">'+esc(st)+'</div><div class="track">'+segs+'</div><div class="val">'+o.t+' venda'+(o.t>1?"s":"")+'</div></div>';
   }).join("");
   const lead = states[0], pm = Object.entries(lead[1].p).sort((a,b)=>b[1]-a[1])[0];
-  $("r2").innerHTML = "<b>"+esc(lead[0])+"</b> lidera com "+lead[1].t+" vendas ("+pct(lead[1].t,n)+" do filtro); lá a forma mais usada é <b>"+esc(PAY_PT[pm[0]]||pm[0])+"</b> ("+pm[1]+"). "+(states.length>1 ? "Mostrando os "+states.length+" estados com mais vendas." : "Só há um estado neste filtro.");
+  $("r2").innerHTML = "<b>"+esc(lead[0])+"</b> lidera com "+lead[1].t+" venda"+(lead[1].t>1?"s":"")+" ("+pct(lead[1].t,n)+" do filtro); lá a forma mais usada é <b>"+esc(PAY_PT[pm[0]]||pm[0])+"</b> ("+pm[1]+"). "+(states.length>1 ? "Mostrando os "+states.length+" estados com mais vendas." : "Só há um estado neste filtro.");
 
   // 3) entrega
   const g = {"Entregue":0,"Em andamento":0,"Cancelada":0};
