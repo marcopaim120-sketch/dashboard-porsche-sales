@@ -2,7 +2,7 @@
 
 Dashboard interativa (HTML de arquivo único) com **100 vendas de exemplo de Porsche nos EUA**, feita como projeto prático da Aceleração Santander (DIO): *AI Reports com Excel, GPT Agents e Claude Code*.
 
-**Endereço da dashboard publicada:** https://SEU-USUARIO.github.io/dashboard-porsche-sales/ *(trocar pelo endereço real depois de publicar)*
+**Endereço da dashboard publicada:** https://marcopaim120-sketch.github.io/dashboard-porsche-sales/
 
 ## Perguntas de negócio escolhidas e por quê
 1. **Quais modelos geram mais receita?** A receita mostra onde está o dinheiro; o volume de vendas sozinho esconde modelos caros que vendem pouco.
@@ -10,7 +10,7 @@ Dashboard interativa (HTML de arquivo único) com **100 vendas de exemplo de Por
 3. **Qual a proporção de vendas entregues, em andamento e canceladas?** Mostra gargalos de entrega e receita perdida com cancelamentos.
 
 ## Como usar
-Abra `index.html` no navegador (ou o endereço acima). Use os filtros de modelo, ano, estado, cidade e pagamento; os indicadores do topo, os gráficos e as frases de leitura se atualizam juntos. O botão **Limpar filtros** volta ao total.
+Abra `index.html` no navegador (ou o endereço publicado acima). Use os filtros de modelo, ano, estado, cidade e pagamento; os indicadores do topo, os gráficos e as frases de leitura se atualizam juntos. O botão **Limpar filtros** volta ao total.
 
 ## Tratamento da base antes de ir para a IA
 Partimos da planilha já sanitizada na aula anterior (colunas "sujas" e colunas "tratadas") e fizemos uma **segunda rodada de revisão**:
